@@ -1,0 +1,21 @@
+{
+  "name": "igniter/debugbar",
+  "type": "igniter-extension",
+  "description": "Integrates Debugbar into TastyIgniter",
+  "authors": [
+    {
+      "name": "Samuel Adepoyigi",
+      "email": "sam@sampoyigi.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "barryvdh/laravel-debugbar": "~3.0",
+    "barryvdh/laravel-ide-helper": "~2.4"
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
