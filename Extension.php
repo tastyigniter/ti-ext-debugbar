@@ -20,11 +20,11 @@ class Extension extends BaseExtension
     public function extensionMeta()
     {
         return [
-            'name'        => 'Debugbar',
-            'author'      => 'IgniterLab',
+            'name' => 'Debugbar',
+            'author' => 'SamPoyigi',
             'description' => 'No description provided yet...',
-            'icon'        => 'fa-plug',
-            'version'     => '1.0.0'
+            'icon' => 'fa-bug',
+            'version' => '1.0.0'
         ];
     }
 
@@ -35,22 +35,20 @@ class Extension extends BaseExtension
      */
     public function register()
     {
-        $configPath = __DIR__ . '/config/ide-helper.php';
+        $configPath = __DIR__.'/config/ide-helper.php';
         $this->mergeConfigFrom($configPath, 'ide-helper');
+
+        $configPath = __DIR__.'/config/debugbar.php';
+        $this->app['config']->set('debugbar', require $configPath);
 
         if (App::environment() !== 'production')
             App::register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
-
-        $configPath = __DIR__ . '/config/debugbar.php';
-        $this->app['config']->set('debugbar', require $configPath);
 
         App::register(\Barryvdh\Debugbar\ServiceProvider::class);
 
         // Register alias
         $alias = AliasLoader::getInstance();
         $alias->alias('Debugbar', \Barryvdh\Debugbar\Facade::class);
-
-//        $this->app['Illuminate\Contracts\Http\Kernel']->pushMiddleware('\Igniter\Debugbar\Middleware\Debugbar');
 
         Event::listen('router.beforeRoute', function ($url, $router) {
             if (!AdminAuth::check()) {
@@ -64,7 +62,7 @@ class Extension extends BaseExtension
      *
      * @return void
      */
-    public function initialize()
+    public function boot()
     {
     }
 }
