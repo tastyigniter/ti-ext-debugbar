@@ -22,7 +22,7 @@ class Extension extends BaseExtension
         return [
             'name' => 'Debugbar',
             'author' => 'SamPoyigi',
-            'description' => 'No description provided yet...',
+            'description' => 'Easily see what\'s going on under the hood of your TastyIgniter application.',
             'icon' => 'fa-bug',
             'version' => '1.0.0'
         ];
