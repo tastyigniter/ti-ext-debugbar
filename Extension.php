@@ -24,7 +24,7 @@ class Extension extends BaseExtension
             'author' => 'SamPoyigi',
             'description' => 'Easily see what\'s going on under the hood of your TastyIgniter application.',
             'icon' => 'fa-bug',
-            'version' => '1.0.0'
+            'version' => '1.0.0',
         ];
     }
 
@@ -55,14 +55,5 @@ class Extension extends BaseExtension
                 Debugbar::disable();
             }
         });
-    }
-
-    /**
-     * Initialize method, called right before the request route.
-     *
-     * @return void
-     */
-    public function boot()
-    {
     }
 }
