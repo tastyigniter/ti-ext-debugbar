@@ -13,22 +13,6 @@ use System\Classes\BaseExtension;
 class Extension extends BaseExtension
 {
     /**
-     * Returns information about this extension.
-     *
-     * @return array
-     */
-    public function extensionMeta()
-    {
-        return [
-            'name' => 'Debugbar',
-            'author' => 'SamPoyigi',
-            'description' => 'Easily see what\'s going on under the hood of your TastyIgniter application.',
-            'icon' => 'fa-bug',
-            'version' => '1.0.0',
-        ];
-    }
-
-    /**
      * Register method, called when the extension is first registered.
      *
      * @return void

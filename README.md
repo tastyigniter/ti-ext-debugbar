@@ -3,7 +3,7 @@ This extension provides easy access to tools like the response timeline, databas
 
 > If the extension was installed without using the marketplace
 
-run a `composer update` from your TastyIgniter root directory
+Run a `composer update` from your TastyIgniter root directory to install the extension dependencies
 
 ## Usage
 Set `debug` to `true` in `config/app.php` and the debugbar should appear.
