@@ -3,6 +3,6 @@
   "name": "Debugbar",
   "author": "SamPoyigi",
   "description": "Easily see what's going on under the hood of your TastyIgniter application.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "icon": "fa-bug"
 }
