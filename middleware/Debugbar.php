@@ -3,10 +3,10 @@
 use Barryvdh\Debugbar\LaravelDebugbar;
 use Closure;
 use Exception;
+use Igniter\Flame\Exception\AjaxException;
 use Illuminate\Foundation\Application;
-use Response;
-use October\Rain\Exception\AjaxException;
 use Request;
+use Response;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 
 class Debugbar
@@ -43,14 +43,15 @@ class Debugbar
 
         try {
             return $next($request);
-        } catch (Exception $ex) {
+        }
+        catch (Exception $ex) {
             if (!Request::ajax()) {
                 throw $ex;
             }
 
             $debugbar->addException($ex);
             $message = $ex instanceof AjaxException
-                ? $ex->getContents() : \October\Rain\Exception\ErrorHandler::getDetailedMessage($ex);
+                ? $ex->getContents() : \Igniter\Flame\Exception\ErrorHandler::getDetailedMessage($ex);
 
             return Response::make($message, $this->getStatusCode($ex), $debugbar->getDataAsHeaders());
         }
