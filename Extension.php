@@ -1,10 +1,10 @@
 <?php namespace Igniter\Debugbar;
 
 use AdminAuth;
-use App;
 use Debugbar;
 use Event;
 use Illuminate\Foundation\AliasLoader;
+use Illuminate\Support\Facades\DB;
 use System\Classes\BaseExtension;
 
 /**
@@ -25,19 +25,21 @@ class Extension extends BaseExtension
         $configPath = __DIR__.'/config/debugbar.php';
         $this->app['config']->set('debugbar', require $configPath);
 
-        if (App::environment() !== 'production')
-            App::register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
+        if ($this->app->environment() !== 'production') {
+            $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
+            DB::getDoctrineSchemaManager()->getDatabasePlatform()->registerDoctrineTypeMapping('json', 'text');
 
-        App::register(\Barryvdh\Debugbar\ServiceProvider::class);
+            $this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);
 
-        // Register alias
-        $alias = AliasLoader::getInstance();
-        $alias->alias('Debugbar', \Barryvdh\Debugbar\Facade::class);
+            // Register alias
+            $alias = AliasLoader::getInstance();
+            $alias->alias('Debugbar', \Barryvdh\Debugbar\Facade::class);
 
-        Event::listen('router.beforeRoute', function ($url, $router) {
-            if (!AdminAuth::check()) {
-                Debugbar::disable();
-            }
-        });
+            Event::listen('router.beforeRoute', function ($url, $router) {
+                if (!AdminAuth::check()) {
+                    Debugbar::disable();
+                }
+            });
+        }
     }
 }
