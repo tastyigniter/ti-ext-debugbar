@@ -9,7 +9,7 @@ return [
      |
      | Debugbar is enabled by default, when debug is set to true in app.php.
      | You can override the value by setting enable to true or false instead of null.
-     | 
+     |
      | You can provide an array of URI's that must be ignored (eg. 'api/*')
      |
      */
@@ -36,7 +36,7 @@ return [
         'driver' => 'file', // redis, file, pdo, custom
         'path' => storage_path('debugbar'), // For file driver
         'connection' => null,   // Leave null for default connection (Redis/PDO)
-        'provider' => '' // Instance of StorageInterface for custom driver
+        'provider' => '', // Instance of StorageInterface for custom driver
     ],
 
     /*
@@ -134,9 +134,9 @@ return [
      */
 
     'options' => [
-//        'auth' => [
-//            'show_name' => true,   // Also show the users name/email in the debugbar
-//        ],
+        //        'auth' => [
+        //            'show_name' => true,   // Also show the users name/email in the debugbar
+        //        ],
         'db' => [
             'with_params' => TRUE,   // Render SQL with the parameters substituted
             'backtrace' => TRUE,   // Use a backtrace to find the origin of the query in your files.
@@ -154,13 +154,13 @@ return [
             'data' => FALSE,    //Note: Can slow down the application, because the data can be quite large..
         ],
         'route' => [
-            'label' => TRUE  // show complete route on bar
+            'label' => TRUE,  // show complete route on bar
         ],
         'logs' => [
             'file' => null,
         ],
         'cache' => [
-            'values' => TRUE // collect cache values
+            'values' => TRUE, // collect cache values
         ],
     ],
 

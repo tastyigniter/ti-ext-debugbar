@@ -69,7 +69,7 @@ return [
         'app/admin/models',
         'app/main/models',
         'app/system/models',
-//        'extensions',
+        //        'extensions',
     ],
 
     /*
