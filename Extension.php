@@ -1,4 +1,6 @@
-<?php namespace Igniter\Debugbar;
+<?php
+
+namespace Igniter\Debugbar;
 
 use AdminAuth;
 use Debugbar;

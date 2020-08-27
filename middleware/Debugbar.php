@@ -1,4 +1,6 @@
-<?php namespace Igniter\Debugbar\Middleware;
+<?php
+
+namespace Igniter\Debugbar\Middleware;
 
 use Barryvdh\Debugbar\LaravelDebugbar;
 use Closure;
@@ -11,7 +13,6 @@ use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 
 class Debugbar
 {
-
     /**
      * The Laravel Application
      *
@@ -77,5 +78,4 @@ class Debugbar
 
         return $code;
     }
-
 }
