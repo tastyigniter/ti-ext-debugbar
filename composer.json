@@ -2,7 +2,6 @@
   "name": "igniter/debugbar",
   "type": "igniter-extension",
   "require": {
-    "php": ">=7.0.0",
     "barryvdh/laravel-debugbar": "~3.0",
     "barryvdh/laravel-ide-helper": "~2.4"
   },
