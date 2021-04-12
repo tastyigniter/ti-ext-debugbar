@@ -1,6 +1,6 @@
 {
   "name": "igniter/debugbar",
-  "type": "igniter-extension",
+  "type": "tastyigniter-extension",
   "require": {
     "barryvdh/laravel-debugbar": "~3.0",
     "barryvdh/laravel-ide-helper": "~2.4"
