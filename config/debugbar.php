@@ -53,7 +53,7 @@ return [
      |
      */
 
-    'include_vendors' => FALSE,
+    'include_vendors' => 'js',
 
     /*
      |--------------------------------------------------------------------------
@@ -89,7 +89,7 @@ return [
      | Extension, without the server-side code. It uses Debugbar collectors instead.
      |
      */
-    'clockwork' => FALSE,
+    'clockwork' => TRUE,
 
     /*
      |--------------------------------------------------------------------------
