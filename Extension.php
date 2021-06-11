@@ -21,27 +21,33 @@ class Extension extends BaseExtension
      */
     public function register()
     {
+        if ($this->app->environment() === 'production' OR !$this->app->hasDatabase())
+            return;
+
         $configPath = __DIR__.'/config/ide-helper.php';
         $this->mergeConfigFrom($configPath, 'ide-helper');
 
         $configPath = __DIR__.'/config/debugbar.php';
         $this->app['config']->set('debugbar', require $configPath);
 
-        if ($this->app->environment() !== 'production') {
-            $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
-            DB::getDoctrineSchemaManager()->getDatabasePlatform()->registerDoctrineTypeMapping('json', 'text');
+        $configPath = __DIR__.'/config/querydetector.php';
+        $this->app['config']->set('querydetector', require $configPath);
 
-            $this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);
+        $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
+        DB::getDoctrineSchemaManager()->getDatabasePlatform()->registerDoctrineTypeMapping('json', 'text');
 
-            // Register alias
-            $alias = AliasLoader::getInstance();
-            $alias->alias('Debugbar', \Barryvdh\Debugbar\Facade::class);
+        $this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);
 
-            Event::listen('router.beforeRoute', function ($url, $router) {
-                if (!AdminAuth::check()) {
-                    Debugbar::disable();
-                }
-            });
-        }
+        // Register alias
+        $alias = AliasLoader::getInstance();
+        $alias->alias('Debugbar', \Barryvdh\Debugbar\Facade::class);
+
+        Event::listen('router.beforeRoute', function ($url, $router) {
+            if (!AdminAuth::check()) {
+                Debugbar::disable();
+            }
+        });
+
+        $this->app->register(\BeyondCode\QueryDetector\QueryDetectorServiceProvider::class);
     }
 }

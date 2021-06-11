@@ -109,12 +109,12 @@ return [
         'log' => TRUE,  // Logs from Monolog (merged in messages if enabled)
         'db' => TRUE,  // Show database (PDO) queries and bindings
         'views' => TRUE,  // Views with their data
-        'route' => TRUE,  // Current route information
+        'route' => FALSE,  // Current route information
         'auth' => FALSE, // Display Laravel authentication status
         'gate' => FALSE, // Display Laravel Gate checks
         'session' => TRUE,  // Display session data
         'symfony_request' => TRUE,  // Only one can be enabled..
-        'mail' => TRUE,  // Catch mail messages
+        'mail' => FALSE,  // Catch mail messages
         'laravel' => TRUE, // Laravel version and environment
         'events' => FALSE, // All events fired
         'default_request' => FALSE, // Regular or special Symfony request logger

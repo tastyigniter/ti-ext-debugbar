@@ -3,7 +3,8 @@
   "type": "tastyigniter-extension",
   "require": {
     "barryvdh/laravel-debugbar": "~3.0",
-    "barryvdh/laravel-ide-helper": "~2.4"
+    "barryvdh/laravel-ide-helper": "~2.4",
+    "beyondcode/laravel-query-detector": "~1.5"
   },
   "config": {
     "preferred-install": "dist"
