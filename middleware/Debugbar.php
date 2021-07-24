@@ -7,8 +7,8 @@ use Closure;
 use Exception;
 use Igniter\Flame\Exception\AjaxException;
 use Illuminate\Foundation\Application;
-use Request;
-use Response;
+use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Response;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 
 class Debugbar

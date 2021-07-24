@@ -2,11 +2,10 @@
 
 namespace Igniter\Debugbar;
 
-use AdminAuth;
-use Debugbar;
-use Event;
+use Admin\Facades\AdminAuth;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Event;
 use System\Classes\BaseExtension;
 
 /**
