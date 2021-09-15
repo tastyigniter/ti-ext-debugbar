@@ -3,7 +3,7 @@
   "name": "Debugbar",
   "author": "SamPoyigi",
   "description": "Easily see what's going on under the hood of your TastyIgniter application.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "icon": {
     "class": "fa fa-bug",
     "backgroundColor": "#8D414E",
