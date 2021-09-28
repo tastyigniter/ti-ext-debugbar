@@ -3,6 +3,7 @@
 namespace Igniter\Debugbar;
 
 use Admin\Facades\AdminAuth;
+use DebugBar\DebugBar;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
@@ -20,7 +21,7 @@ class Extension extends BaseExtension
      */
     public function register()
     {
-        if ($this->app->environment() === 'production' OR !$this->app->hasDatabase())
+        if (!config('app.debug', FALSE) OR !$this->app->hasDatabase())
             return;
 
         $configPath = __DIR__.'/config/ide-helper.php';
