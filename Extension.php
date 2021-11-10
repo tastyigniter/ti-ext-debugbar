@@ -3,7 +3,7 @@
 namespace Igniter\Debugbar;
 
 use Admin\Facades\AdminAuth;
-use DebugBar\DebugBar;
+use Barryvdh\Debugbar\Facade as Debugbar;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
@@ -30,9 +30,6 @@ class Extension extends BaseExtension
         $configPath = __DIR__.'/config/debugbar.php';
         $this->app['config']->set('debugbar', require $configPath);
 
-        $configPath = __DIR__.'/config/querydetector.php';
-        $this->app['config']->set('querydetector', require $configPath);
-
         $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
         DB::getDoctrineSchemaManager()->getDatabasePlatform()->registerDoctrineTypeMapping('json', 'text');
 
@@ -47,7 +44,5 @@ class Extension extends BaseExtension
                 Debugbar::disable();
             }
         });
-
-        $this->app->register(\BeyondCode\QueryDetector\QueryDetectorServiceProvider::class);
     }
 }
