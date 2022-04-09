@@ -82,8 +82,8 @@ return [
     */
 
     'extra' => [
-        'Eloquent' => ['Illuminate\Database\Eloquent\Builder', 'Igniter\Flame\Database\Query\Builder'],
-        'Session' => ['Illuminate\Session\Store'],
+        'Eloquent' => [\Illuminate\Database\Eloquent\Builder::class, \Igniter\Flame\Database\Query\Builder::class],
+        'Session' => [\Illuminate\Session\Store::class],
     ],
 
     'magic' => [
