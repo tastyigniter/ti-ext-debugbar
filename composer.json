@@ -10,8 +10,7 @@
     }
   ],
   "require": {
-    "barryvdh/laravel-debugbar": "~3.0",
-    "barryvdh/laravel-ide-helper": "~2.4"
+    "barryvdh/laravel-debugbar": "~3.0"
   },
   "extra": {
     "tastyigniter-extension": {
