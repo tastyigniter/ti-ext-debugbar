@@ -25,7 +25,7 @@ return [
     |
     */
 
-    'include_fluent' => TRUE,
+    'include_fluent' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -36,8 +36,8 @@ return [
     |
     */
 
-    'write_model_magic_where' => TRUE,
-    'write_eloquent_model_mixins' => TRUE,
+    'write_model_magic_where' => true,
+    'write_eloquent_model_mixins' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -49,7 +49,7 @@ return [
     |
     */
 
-    'include_helpers' => FALSE,
+    'include_helpers' => false,
 
     'helper_files' => [
         base_path().'/vendor/tastyigniter/flame/src/Support/helpers.php',
@@ -167,7 +167,7 @@ return [
      | Note, it is currently an all-or-nothing option.
      |
      */
-    'model_camel_case_properties' => TRUE,
+    'model_camel_case_properties' => true,
 
     /*
     |--------------------------------------------------------------------------

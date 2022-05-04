@@ -21,7 +21,7 @@ class Extension extends BaseExtension
      */
     public function register()
     {
-        if (!config('app.debug', FALSE) || !$this->app->hasDatabase())
+        if (!config('app.debug', false) || !$this->app->hasDatabase())
             return;
 
         $configPath = __DIR__.'/config/ide-helper.php';
