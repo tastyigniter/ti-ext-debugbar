@@ -2,11 +2,12 @@
 
 namespace Igniter\Debugbar;
 
-use Admin\Facades\AdminAuth;
 use Barryvdh\Debugbar\Facade as Debugbar;
+use Igniter;
+use Igniter\Admin\Facades\AdminAuth;
+use Igniter\Igniter\System\Classes\BaseExtension;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\Facades\Event;
-use System\Classes\BaseExtension;
 
 /**
  * Debugbar Extension Information File
@@ -20,10 +21,10 @@ class Extension extends BaseExtension
      */
     public function register()
     {
-        if (!config('app.debug', false) || !$this->app->hasDatabase())
+        if (!config('app.debug', false) || !Igniter::hasDatabase())
             return;
 
-        $configPath = __DIR__.'/config/debugbar.php';
+        $configPath = __DIR__.'/../config/debugbar.php';
         $this->app['config']->set('debugbar', require $configPath);
 
         $this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);

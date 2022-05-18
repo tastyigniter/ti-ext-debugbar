@@ -1,6 +1,5 @@
 {
   "name": "tastyigniter/ti-ext-debugbar",
-  "type": "tastyigniter-extension",
   "description": "Easily see what's going on under the hood of your TastyIgniter application.",
   "license": "MIT",
   "authors": [
@@ -12,6 +11,11 @@
   "require": {
     "barryvdh/laravel-debugbar": "~3.0"
   },
+  "autoload": {
+    "psr-4": {
+      "Igniter\\Debugbar\\": "src/"
+    }
+  },
   "extra": {
     "tastyigniter-extension": {
       "code": "igniter.debugbar",
@@ -22,6 +26,11 @@
         "color": "#FFF"
       },
       "homepage": "https://tastyigniter.com/marketplace/item/igniter-debugbar"
+    },
+    "laravel": {
+      "dont-discover": [
+        "barryvdh/laravel-debugbar"
+      ]
     }
   }
 }
