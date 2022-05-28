@@ -2,9 +2,9 @@
 
 namespace Igniter\Debugbar;
 
-use Barryvdh\Debugbar\Facade as Debugbar;
+use Barryvdh\Debugbar\Facades\Debugbar;
 use Igniter\Admin\Facades\AdminAuth;
-use Igniter\Igniter;
+use Igniter\Flame\Igniter;
 use Igniter\System\Classes\BaseExtension;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\Facades\Event;
