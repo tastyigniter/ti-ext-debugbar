@@ -9,6 +9,7 @@
     }
   ],
   "require": {
+    "tastyigniter/flame": "v4.x-dev",
     "barryvdh/laravel-debugbar": "~3.0"
   },
   "autoload": {
