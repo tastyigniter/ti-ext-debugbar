@@ -1,36 +1,49 @@
 {
-  "name": "tastyigniter/ti-ext-debugbar",
-  "description": "Easily see what's going on under the hood of your TastyIgniter application.",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Sam Poyigi",
-      "email": "sam@sampoyigi.com"
-    }
-  ],
-  "require": {
-    "barryvdh/laravel-debugbar": "~3.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "Igniter\\Debugbar\\": "src/"
-    }
-  },
-  "extra": {
-    "tastyigniter-extension": {
-      "code": "igniter.debugbar",
-      "name": "Debugbar",
-      "icon": {
-        "class": "fa fa-bug",
-        "backgroundColor": "#8D414E",
-        "color": "#FFF"
-      },
-      "homepage": "https://tastyigniter.com/marketplace/item/igniter-debugbar"
+    "name": "tastyigniter/ti-ext-debugbar",
+    "description": "Easily see what's going on under the hood of your TastyIgniter application.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sam Poyigi",
+            "email": "sam@sampoyigi.com"
+        }
+    ],
+    "require": {
+        "barryvdh/laravel-debugbar": "~3.0"
     },
-    "laravel": {
-      "dont-discover": [
-        "barryvdh/laravel-debugbar"
-      ]
+    "autoload": {
+        "psr-4": {
+            "Igniter\\Debugbar\\": "src/"
+        }
+    },
+    "extra": {
+        "tastyigniter-extension": {
+            "code": "igniter.debugbar",
+            "name": "Debugbar",
+            "icon": {
+                "class": "fa fa-bug",
+                "backgroundColor": "#8D414E",
+                "color": "#FFF"
+            },
+            "homepage": "https://tastyigniter.com/marketplace/item/igniter-debugbar"
+        },
+        "laravel": {
+            "dont-discover": [
+                "barryvdh/laravel-debugbar"
+            ]
+        }
+    },
+    "require-dev": {
+        "laravel/pint": "^1.2",
+        "nunomaduro/larastan": "^2.4.0",
+        "pestphp/pest-plugin-laravel": "^2.0",
+        "pestphp/pest": "^2.5",
+        "orchestra/testbench": "^8.5"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
+        "sort-packages": true
     }
-  }
 }
