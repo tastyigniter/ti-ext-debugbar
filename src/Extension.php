@@ -21,8 +21,9 @@ class Extension extends BaseExtension
      */
     public function register()
     {
-        if (!config('app.debug', false) || !Igniter::hasDatabase())
+        if (!config('app.debug', false) || !Igniter::hasDatabase()) {
             return;
+        }
 
         $configPath = __DIR__.'/../config/debugbar.php';
         $this->app['config']->set('debugbar', require $configPath);
