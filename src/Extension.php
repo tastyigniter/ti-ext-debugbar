@@ -28,6 +28,7 @@ class Extension extends BaseExtension
         $configPath = __DIR__.'/../config/debugbar.php';
         $this->app['config']->set('debugbar', require $configPath);
 
+        $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
         $this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);
 
         // Register alias
