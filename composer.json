@@ -9,7 +9,16 @@
     }
   ],
   "require": {
-    "barryvdh/laravel-debugbar": "~3.0"
+    "barryvdh/laravel-debugbar": "~3.0",
+    "barryvdh/laravel-ide-helper": "^v3.0.0"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.2",
+    "nunomaduro/larastan": "^2.4.0",
+    "orchestra/testbench": "^8.5",
+    "pestphp/pest": "^2.5",
+    "pestphp/pest-plugin-laravel": "^2.0",
+    "tastyigniter/core": "dev-master"
   },
   "autoload": {
     "psr-4": {
@@ -33,15 +42,6 @@
         "barryvdh/laravel-ide-helper"
       ]
     }
-  },
-  "require-dev": {
-    "barryvdh/laravel-ide-helper": "^3.0@dev",
-    "laravel/pint": "^1.2",
-    "nunomaduro/larastan": "^2.4.0",
-    "orchestra/testbench": "^8.5",
-    "pestphp/pest": "^2.5",
-    "pestphp/pest-plugin-laravel": "^2.0",
-    "tastyigniter/core": "dev-master"
   },
   "scripts": {
     "test": "vendor/bin/pest",
