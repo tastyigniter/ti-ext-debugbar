@@ -1,61 +1,61 @@
 {
-  "name": "tastyigniter/ti-ext-debugbar",
-  "description": "Easily see what's going on under the hood of your TastyIgniter application.",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Sam Poyigi",
-      "email": "sam@sampoyigi.com"
-    }
-  ],
-  "require": {
-    "barryvdh/laravel-debugbar": "~3.0",
-    "barryvdh/laravel-ide-helper": "^v3.0.0"
-  },
-  "require-dev": {
-    "laravel/pint": "^1.2",
-    "nunomaduro/larastan": "^2.4.0",
-    "orchestra/testbench": "^8.5",
-    "pestphp/pest": "^2.5",
-    "pestphp/pest-plugin-laravel": "^2.0",
-    "tastyigniter/core": "dev-master"
-  },
-  "autoload": {
-    "psr-4": {
-      "Igniter\\Debugbar\\": "src/"
-    }
-  },
-  "extra": {
-    "tastyigniter-extension": {
-      "code": "igniter.debugbar",
-      "name": "Debugbar",
-      "icon": {
-        "class": "fa fa-bug",
-        "backgroundColor": "#8D414E",
-        "color": "#FFF"
-      },
-      "homepage": "https://tastyigniter.com/marketplace/item/igniter-debugbar"
+    "name": "tastyigniter/ti-ext-debugbar",
+    "description": "Easily see what's going on under the hood of your TastyIgniter application.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sam Poyigi",
+            "email": "sam@sampoyigi.com"
+        }
+    ],
+    "require": {
+        "barryvdh/laravel-debugbar": "~3.0",
+        "barryvdh/laravel-ide-helper": "^v3.0.0",
+        "tastyigniter/core": "dev-master"
     },
-    "laravel": {
-      "dont-discover": [
-        "barryvdh/laravel-debugbar",
-        "barryvdh/laravel-ide-helper"
-      ]
-    }
-  },
-  "scripts": {
-    "test": "vendor/bin/pest",
-    "test-coverage": "vendor/bin/pest --coverage",
-    "format": "vendor/bin/pint",
-    "static": "vendor/bin/phpstan analyse --ansi --memory-limit 1056M"
-  },
-  "config": {
-    "allow-plugins": {
-      "pestphp/pest-plugin": true,
-      "php-http/discovery": true,
-      "composer/installers": true
+    "require-dev": {
+        "laravel/pint": "^1.2",
+        "nunomaduro/larastan": "^2.4.0",
+        "orchestra/testbench": "^8.5",
+        "pestphp/pest": "^2.5",
+        "pestphp/pest-plugin-laravel": "^2.0"
     },
-    "sort-packages": true
-  },
-  "minimum-stability": "dev"
+    "autoload": {
+        "psr-4": {
+            "Igniter\\Debugbar\\": "src/"
+        }
+    },
+    "extra": {
+        "tastyigniter-extension": {
+            "code": "igniter.debugbar",
+            "name": "Debugbar",
+            "icon": {
+                "class": "fa fa-bug",
+                "backgroundColor": "#8D414E",
+                "color": "#FFF"
+            },
+            "homepage": "https://tastyigniter.com/marketplace/item/igniter-debugbar"
+        },
+        "laravel": {
+            "dont-discover": [
+                "barryvdh/laravel-debugbar",
+                "barryvdh/laravel-ide-helper"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint",
+        "static": "vendor/bin/phpstan analyse --ansi --memory-limit 1056M"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true,
+            "composer/installers": true
+        },
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
 }
