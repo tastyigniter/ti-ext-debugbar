@@ -35,7 +35,7 @@ class Extension extends BaseExtension
         $alias = AliasLoader::getInstance();
         $alias->alias('Debugbar', \Barryvdh\Debugbar\Facade::class);
 
-        Event::listen('router.beforeRoute', function ($url, $router) {
+        Event::listen('router.beforeRoute', function($url, $router) {
             if (!AdminAuth::check()) {
                 Debugbar::disable();
             }
