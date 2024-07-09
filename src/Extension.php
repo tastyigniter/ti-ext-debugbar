@@ -6,7 +6,6 @@ use Barryvdh\Debugbar\Facades\Debugbar;
 use Igniter\Flame\Igniter;
 use Igniter\System\Classes\BaseExtension;
 use Igniter\User\Facades\AdminAuth;
-use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\Facades\Event;
 
 /**
@@ -30,10 +29,7 @@ class Extension extends BaseExtension
 
         $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
         $this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);
-
-        // Register alias
-        $alias = AliasLoader::getInstance();
-        $alias->alias('Debugbar', \Barryvdh\Debugbar\Facade::class);
+        $this->app->register(\Clockwork\Support\Laravel\ClockworkServiceProvider::class);
 
         Event::listen('router.beforeRoute', function($url, $router) {
             if (!AdminAuth::check()) {

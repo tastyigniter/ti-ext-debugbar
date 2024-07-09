@@ -11,6 +11,7 @@
   "require": {
     "barryvdh/laravel-debugbar": "~3.0",
     "barryvdh/laravel-ide-helper": "^v3.0.0",
+    "itsgoingd/clockwork": "^5.0",
     "tastyigniter/core": "dev-master"
   },
   "require-dev": {
@@ -39,7 +40,8 @@
     "laravel": {
       "dont-discover": [
         "barryvdh/laravel-debugbar",
-        "barryvdh/laravel-ide-helper"
+        "barryvdh/laravel-ide-helper",
+        "itsgoingd/clockwork"
       ]
     }
   },
