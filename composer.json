@@ -12,7 +12,7 @@
     "barryvdh/laravel-debugbar": "~3.0",
     "barryvdh/laravel-ide-helper": "^v3.0.0",
     "itsgoingd/clockwork": "^5.0",
-    "tastyigniter/core": "dev-master"
+    "tastyigniter/core": "^v4.0@beta"
   },
   "require-dev": {
     "laravel/pint": "^1.2",
@@ -59,5 +59,6 @@
     },
     "sort-packages": true
   },
-  "minimum-stability": "dev"
+  "minimum-stability": "beta",
+  "prefer-stable": true
 }
