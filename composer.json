@@ -59,6 +59,5 @@
     },
     "sort-packages": true
   },
-  "minimum-stability": "beta",
-  "prefer-stable": true
+  "minimum-stability": "beta"
 }
