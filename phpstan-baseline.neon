@@ -11,6 +11,11 @@ parameters:
 			path: src/Extension.php
 
 		-
+			message: "#^Call to static method hasDatabase\\(\\) on an unknown class Igniter\\\\Flame\\\\Support\\\\Facades\\\\Igniter\\.$#"
+			count: 1
+			path: src/Extension.php
+
+		-
 			message: "#^Call to an undefined static method Igniter\\\\Flame\\\\Exception\\\\ErrorHandler\\:\\:getDetailedMessage\\(\\)\\.$#"
 			count: 1
 			path: src/Middleware/Debugbar.php
