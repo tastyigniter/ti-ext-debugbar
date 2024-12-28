@@ -3,7 +3,7 @@
 namespace Igniter\Debugbar;
 
 use Barryvdh\Debugbar\Facades\Debugbar;
-use Igniter\Flame\Igniter;
+use Igniter\Flame\Support\Facades\Igniter;
 use Igniter\System\Classes\BaseExtension;
 use Igniter\User\Facades\AdminAuth;
 use Illuminate\Support\Facades\Event;
