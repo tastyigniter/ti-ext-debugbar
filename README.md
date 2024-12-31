@@ -1,3 +1,10 @@
+<p align="center">
+    <a href="https://github.com/tastyigniter/ti-ext-debugbar/actions"><img src="https://github.com/tastyigniter/ti-ext-debugbar/actions/workflows/pipeline.yml/badge.svg" alt="Build Status"></a>
+    <a href="https://packagist.org/packages/tastyigniter/ti-ext-debugbar"><img src="https://img.shields.io/packagist/dt/tastyigniter/ti-ext-debugbar" alt="Total Downloads"></a>
+    <a href="https://packagist.org/packages/tastyigniter/ti-ext-debugbar"><img src="https://img.shields.io/packagist/v/tastyigniter/ti-ext-debugbar" alt="Latest Stable Version"></a>
+    <a href="https://packagist.org/packages/tastyigniter/ti-ext-debugbar"><img src="https://img.shields.io/packagist/l/tastyigniter/ti-ext-debugbar" alt="License"></a>
+</p>
+
 ## Introduction
 
 The TastyIgniter DebugBar extension a seamless integration of [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar) and [ide-helper](https://github.com/barryvdh/laravel-ide-helper), is a powerful tool for developers. It provides a convenient way to profile your TastyIgniter application and generate helper files for IDEs, making local development a breeze.
