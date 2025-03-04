@@ -12,12 +12,12 @@
     "barryvdh/laravel-debugbar": "~3.0",
     "barryvdh/laravel-ide-helper": "^v3.0.0",
     "itsgoingd/clockwork": "^5.0",
-    "tastyigniter/core": "^v4.0@beta"
+    "tastyigniter/core": "^v4.0"
   },
   "require-dev": {
     "laravel/pint": "^1.2",
-    "larastan/larastan": "^2.4.0",
-    "sampoyigi/testbench": "dev-main as 1.0",
+    "larastan/larastan": "^2.4",
+    "sampoyigi/testbench": "^1.0",
     "pestphp/pest": "^2.5",
     "pestphp/pest-plugin-laravel": "^2.0"
   },
@@ -58,6 +58,5 @@
       "composer/installers": true
     },
     "sort-packages": true
-  },
-  "minimum-stability": "beta"
+  }
 }
