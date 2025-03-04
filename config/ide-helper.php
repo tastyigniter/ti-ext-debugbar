@@ -52,7 +52,7 @@ return [
     'include_helpers' => false,
 
     'helper_files' => [
-        base_path().'/vendor/tastyigniter/flame/src/Support/helpers.php',
+        base_path().'/vendor/tastyigniter/core/src/Support/helpers.php',
     ],
 
     /*
