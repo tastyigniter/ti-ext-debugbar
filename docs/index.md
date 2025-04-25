@@ -1,9 +1,15 @@
+---
+title: "Debugbar"
+section: "extensions"
+sortOrder: 140
+---
+
 ## Installation
 
 You can install the extension via composer using the following command:
 
 ```bash
-composer require tastyigniter/ti-ext-debugbar:"^4.0" -W
+composer require tastyigniter/ti-ext-debugbar -W
 ```
 
 ## Getting started
