@@ -20,7 +20,7 @@ class Extension extends BaseExtension
      */
     public function register()
     {
-        if (!config('app.debug', false) || !Igniter::hasDatabase()) {
+        if (!Igniter::hasDatabase()) {
             return;
         }
 
