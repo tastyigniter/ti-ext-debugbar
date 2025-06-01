@@ -22,7 +22,7 @@ For more information on how to use or configure the DebugBar, refer to the [Lara
 
 ## Usage
 
-This section explains how to use the _DebugBar_ in your own extension if you need to debug your code or profile its performance.
+This section covers how to use the _DebugBar_ in your own extension if you need to debug your code or profile its performance.
 
 ### Profiling
 
