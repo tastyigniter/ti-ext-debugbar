@@ -4,20 +4,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Filename & Format
-    |--------------------------------------------------------------------------
-    |
-    | The default filename (without extension) and the format (php or json)
-    |
-    */
-
-    'filename' => '_ide_helper',
-    'format' => 'php',
-
-    'meta_filename' => '.phpstorm.meta.php',
-
-    /*
-    |--------------------------------------------------------------------------
     | Fluent helpers
     |--------------------------------------------------------------------------
     |
@@ -29,14 +15,17 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Write Model Magic methods
+    | Write Eloquent model mixins
     |--------------------------------------------------------------------------
     |
-    | Set to false to disable write magic methods of model
+    | This will add the necessary DocBlock mixins to the model class
+    | contained in the Laravel framework. This helps the IDE with
+    | auto-completion.
+    |
+    | Please be aware that this setting changes a file within the /vendor directory.
     |
     */
 
-    'write_model_magic_where' => true,
     'write_eloquent_model_mixins' => true,
 
     /*
@@ -49,27 +38,8 @@ return [
     |
     */
 
-    'include_helpers' => false,
-
     'helper_files' => [
         base_path().'/vendor/tastyigniter/core/src/Support/helpers.php',
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Model locations to include
-    |--------------------------------------------------------------------------
-    |
-    | Define in which directories the ide-helper:models command should look
-    | for models.
-    |
-    */
-
-    'model_locations' => [
-        'app/admin/models',
-        'app/main/models',
-        'app/system/models',
-        //        'extensions',
     ],
 
     /*
@@ -84,63 +54,6 @@ return [
     'extra' => [
         'Eloquent' => [\Illuminate\Database\Eloquent\Builder::class, \Igniter\Flame\Database\Query\Builder::class],
         'Session' => [\Illuminate\Session\Store::class],
-    ],
-
-    'magic' => [
-        'Log' => [
-            'debug' => 'Monolog\Logger::addDebug',
-            'info' => 'Monolog\Logger::addInfo',
-            'notice' => 'Monolog\Logger::addNotice',
-            'warning' => 'Monolog\Logger::addWarning',
-            'error' => 'Monolog\Logger::addError',
-            'critical' => 'Monolog\Logger::addCritical',
-            'alert' => 'Monolog\Logger::addAlert',
-            'emergency' => 'Monolog\Logger::addEmergency',
-        ],
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Interface implementations
-    |--------------------------------------------------------------------------
-    |
-    | These interfaces will be replaced with the implementing class. Some interfaces
-    | are detected by the helpers, others can be listed below.
-    |
-    */
-
-    'interfaces' => [
-
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Support for custom DB types
-    |--------------------------------------------------------------------------
-    |
-    | This setting allow you to map any custom database type (that you may have
-    | created using CREATE TYPE statement or imported using database plugin
-    | / extension to a Doctrine type.
-    |
-    | Each key in this array is a name of the Doctrine2 DBAL Platform. Currently valid names are:
-    | 'postgresql', 'db2', 'drizzle', 'mysql', 'oracle', 'sqlanywhere', 'sqlite', 'mssql'
-    |
-    | This name is returned by getName() method of the specific Doctrine/DBAL/Platforms/AbstractPlatform descendant
-    |
-    | The value of the array is an array of type mappings. Key is the name of the custom type,
-    | (for example, "jsonb" from Postgres 9.4) and the value is the name of the corresponding Doctrine2 type (in
-    | our case it is 'json_array'. Doctrine types are listed here:
-    | http://doctrine-dbal.readthedocs.org/en/latest/reference/types.html
-    |
-    | So to support jsonb in your models when working with Postgres, just add the following entry to the array below:
-    |
-    | "postgresql" => array(
-    |       "jsonb" => "json_array",
-    |  ),
-    |
-    */
-    'custom_db_types' => [
-
     ],
 
     /*
@@ -168,17 +81,4 @@ return [
      |
      */
     'model_camel_case_properties' => true,
-
-    /*
-    |--------------------------------------------------------------------------
-    | Property Casts
-    |--------------------------------------------------------------------------
-    |
-    | Cast the given "real type" to the given "type".
-    |
-    */
-    'type_overrides' => [
-        'integer' => 'int',
-        'boolean' => 'bool',
-    ],
 ];

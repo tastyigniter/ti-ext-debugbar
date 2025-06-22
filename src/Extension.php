@@ -24,17 +24,26 @@ class Extension extends BaseExtension
             return;
         }
 
-        $configPath = __DIR__.'/../config/debugbar.php';
-        $this->app['config']->set('debugbar', require $configPath);
-
         $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
         $this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);
         $this->app->register(\Clockwork\Support\Laravel\ClockworkServiceProvider::class);
+
+        $this->mergeIdeHelperConfig();
 
         Event::listen('router.beforeRoute', function($url, $router) {
             if (!AdminAuth::check()) {
                 Debugbar::disable();
             }
         });
+    }
+
+    protected function mergeIdeHelperConfig(): void
+    {
+        $config = $this->app['config'];
+
+        $configPath = __DIR__.'/../config/ide-helper.php';
+        $config->set('ide-helper', array_merge_deep(
+            $config->get('ide-helper', []), require $configPath,
+        ));
     }
 }
