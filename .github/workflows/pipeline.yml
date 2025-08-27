@@ -6,4 +6,3 @@ jobs:
   php-lint:
     uses: tastyigniter/workflows/.github/workflows/php-lint.yml@main
     with:
-      composer: update --no-interaction --no-progress
