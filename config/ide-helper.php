@@ -1,5 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Session\Store;
+
 return [
 
     /*
@@ -52,8 +57,8 @@ return [
     */
 
     'extra' => [
-        'Eloquent' => [\Illuminate\Database\Eloquent\Builder::class, \Igniter\Flame\Database\Query\Builder::class],
-        'Session' => [\Illuminate\Session\Store::class],
+        'Eloquent' => [Builder::class, \Igniter\Flame\Database\Query\Builder::class],
+        'Session' => [Store::class],
     ],
 
     /*

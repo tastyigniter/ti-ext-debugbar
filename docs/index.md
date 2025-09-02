@@ -16,7 +16,7 @@ composer require tastyigniter/ti-ext-debugbar -W
 
 The DebugBar extension integrates the Laravel Debugbar into TastyIgniter, providing a powerful debugging tool for developers. It allows you to inspect and profile your application easily, offering insights into queries, routes, views, and more.
 
-To enable the DebugBar, set `APP_DEBUG` to `true` in your `.env` file. Once enabled, the DebugBar will appear at the bottom of all admin pages. Please note, you must be logged in as an admin to view the DebugBar on the frontend.
+To enable the DebugBar, set `DEBUGBAR_ENABLED` to `true` in your `.env` file. Once enabled, the DebugBar will appear at the bottom of all admin pages. Please note, you must be logged in as an admin to view the DebugBar on the frontend.
 
 For more information on how to use or configure the DebugBar, refer to the [Laravel Debugbar documentation](https://github.com/barryvdh/laravel-debugbar)
 
