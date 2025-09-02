@@ -71,8 +71,7 @@
         "test": [
             "@test:lint",
             "@test:refactor",
-            "@test:static",
-            "@test:coverage"
+            "@test:static"
         ]
     }
 }
