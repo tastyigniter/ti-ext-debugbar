@@ -20,6 +20,8 @@ To enable the DebugBar, set `DEBUGBAR_ENABLED` to `true` in your `.env` file. On
 
 For more information on how to use or configure the DebugBar, refer to the [Laravel Debugbar documentation](https://github.com/barryvdh/laravel-debugbar)
 
+For more information on how to use or configure the DebugBar, refer to the [Laravel Debugbar documentation](https://github.com/barryvdh/laravel-debugbar)
+
 ## Usage
 
 This section covers how to use the _DebugBar_ in your own extension if you need to debug your code or profile its performance.
