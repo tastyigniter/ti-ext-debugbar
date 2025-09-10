@@ -1,12 +1,18 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Igniter\Debugbar;
 
 use Barryvdh\Debugbar\Facades\Debugbar;
+use Barryvdh\Debugbar\ServiceProvider;
+use Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider;
+use Clockwork\Support\Laravel\ClockworkServiceProvider;
 use Igniter\Flame\Support\Facades\Igniter;
 use Igniter\System\Classes\BaseExtension;
 use Igniter\User\Facades\AdminAuth;
 use Illuminate\Support\Facades\Event;
+use Override;
 
 /**
  * Debugbar Extension Information File
@@ -15,22 +21,21 @@ class Extension extends BaseExtension
 {
     /**
      * Register method, called when the extension is first registered.
-     *
-     * @return void
      */
-    public function register()
+    #[Override]
+    public function register(): void
     {
         if (!Igniter::hasDatabase()) {
             return;
         }
 
-        $this->app->register(\Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class);
-        $this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);
-        $this->app->register(\Clockwork\Support\Laravel\ClockworkServiceProvider::class);
+        $this->app->register(IdeHelperServiceProvider::class);
+        $this->app->register(ServiceProvider::class);
+        $this->app->register(ClockworkServiceProvider::class);
 
         $this->mergeIdeHelperConfig();
 
-        Event::listen('router.beforeRoute', function($url, $router) {
+        Event::listen('router.beforeRoute', function($url, $router): void {
             if (!AdminAuth::check()) {
                 Debugbar::disable();
             }
