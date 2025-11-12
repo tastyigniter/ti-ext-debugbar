@@ -10,3 +10,9 @@ jobs:
     uses: tastyigniter/workflows/.github/workflows/php-lint.yml@main
     with:
       php-version: ${{ matrix.php }}
+
+  auto-merge-release:
+    needs: [ php-lint ]
+    uses: tastyigniter/workflows/.github/workflows/auto-merge-release.yml@main
+    with:
+      release-branch: master
