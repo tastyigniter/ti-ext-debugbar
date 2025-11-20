@@ -1,20 +1,12 @@
-name: Debugbar CI Pipeline
+name: CI Pipeline
 
 on: [ push, workflow_dispatch ]
 
 jobs:
-  php-lint:
+  php-tests:
     strategy:
       matrix:
         php: [ '8.3', '8.4' ]
-    uses: tastyigniter/workflows/.github/workflows/php-lint.yml@main
+    uses: tastyigniter/workflows/.github/workflows/php-tests.yml@main
     with:
       php-version: ${{ matrix.php }}
-
-  auto-merge-release:
-    needs: [ php-lint ]
-    uses: tastyigniter/workflows/.github/workflows/auto-merge-release.yml@main
-    with:
-      release-branch: master
-    secrets:
-      ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
