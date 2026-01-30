@@ -25,7 +25,7 @@ Please see [CHANGELOG](https://github.com/tastyigniter/ti-ext-debugbar/blob/mast
 
 ## Reporting issues
 
-If you encounter a bug in this extension, please report it using the [Issue Tracker](https://github.com/tastyigniter/ti-ext-debugbar/issues) on GitHub.
+If you encounter a bug in this extension, please report it using the [Issue Tracker](https://github.com/tastyigniter/TastyIgniter/issues) on GitHub.
 
 ## Contributing
 
@@ -37,4 +37,4 @@ For reporting security vulnerabilities, please see [our security policy](https:/
 
 ## License
 
-TastyIgniter Coupons extension is open-source software licensed under the [MIT license](https://github.com/tastyigniter/ti-ext-debugbar/blob/master/LICENSE.md).
+TastyIgniter DebugBar extension is open-source software licensed under the [MIT license](https://github.com/tastyigniter/ti-ext-debugbar/blob/master/LICENSE.md).
