@@ -19,10 +19,6 @@ The TastyIgniter DebugBar extension a seamless integration of [barryvdh/laravel-
 
 Documentation can be found on the [TastyIgniter documentation website](https://tastyigniter.com/docs/extensions/debugbar).
 
-## Changelog
-
-Please see [CHANGELOG](https://github.com/tastyigniter/ti-ext-debugbar/blob/master/CHANGELOG.md) for more information on what has changed recently.
-
 ## Reporting issues
 
 If you encounter a bug in this extension, please report it using the [Issue Tracker](https://github.com/tastyigniter/TastyIgniter/issues) on GitHub.
