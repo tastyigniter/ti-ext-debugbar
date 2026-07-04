@@ -57,7 +57,7 @@ return [
     */
 
     'extra' => [
-        'Eloquent' => [Builder::class, \Igniter\Flame\Database\Query\Builder::class],
+        'Eloquent' => [Builder::class, Igniter\Flame\Database\Query\Builder::class],
         'Session' => [Store::class],
     ],
 
